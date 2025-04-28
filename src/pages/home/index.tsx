@@ -38,17 +38,17 @@ export default function Home() {
       </header>
 
       {/* Nav Tabs */}
-      <nav className="flex flex-wrap justify-center gap-6 text-gray-400 border-t border-b border-gray-700 py-3 bg-gray-800 sticky top-0 z-10">
-        {["Feed", "Experience", "Education", "Skills", "Projects", ""].map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
-            className="hover:text-white transition"
-          >
-            {item}
-          </a>
-        ))}
-      </nav>
+      <nav className="flex flex-nowrap justify-center gap-6 text-gray-400 border-t border-b border-gray-700 py-3 bg-gray-800 sticky top-0 z-10 overflow-x-auto scrollbar-hide">
+  {["Feed", "Experience", "Education", "Skills", "Projects", "Certifications"].map((item) => (
+    <a
+      key={item}
+      href={`#${item.toLowerCase()}`}
+      className="hover:text-white transition whitespace-nowrap"
+    >
+      {item}
+    </a>
+  ))}
+</nav>
 
       {/* Main Content */}
       <main className="flex-grow">
