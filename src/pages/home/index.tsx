@@ -82,7 +82,7 @@ export default function Home() {
       {/* Nav Tabs */}
       <nav className="flex flex-nowrap justify-center gap-6 text-gray-400 border-t border-b border-gray-700 py-3 bg-gray-800 sticky top-0 z-10 overflow-x-auto scrollbar-hide">
         {[
-          "Feed",
+          "Summary",
           "Experience",
           "Education",
           "Skills",
@@ -102,18 +102,18 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-grow">
         {/* Feed */}
-        <section className="max-w-4xl mx-auto px-4 py-10">
+        <section id="summary" className="max-w-4xl mx-auto px-4 py-10">
           <p className="text-gray-300 text-base leading-relaxed">
             I am a passionate and results-driven{" "}
             <strong>Fullstack Developer</strong> with{" "}
-            <strong>4 years of professional experience</strong> building
+            <strong>4 years of professional experience</strong> in building
             web-based solutions across industries such as banking, agribusiness,
-            retail, and consulting. Skilled in{" "}
+            retail, and consulting. Proficient in{" "}
             <strong>Backend</strong> (Java Spring Boot, Laravel,
             Node.js) and <strong>Frontend</strong> (React, Next.js,
             Tailwind CSS), I specialize in creating scalable, secure, and
-            high-performance applications. I thrive on continuous learning and
-            delivering maintainable, quality-driven software solutions.
+            high-performance applications. I am committed to continuous learning
+            and delivering maintainable, high-quality software solutions.
           </p>
         </section>
 
@@ -122,33 +122,34 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-6">Experience</h2>
           <div className="space-y-6">
             {[
-              {
-                title: "Fullstack Developer (Part Time) – OMNI IT Consulting",
-                period: "April 2025 - Present",
-                desc: "Build and upgraded ERP systems for several retail companies",
-                details: [
-                  "MJ Beauty: Build ERP system for beauty products, cosmetics, skincare, personal care, makeup.",
-                ],
-              },
-              {
-                title: "Backend Developer – Digital Center",
-                period: "December 2022 - Present",
-                desc: "Enterprise-level backend systems and internal tools development.",
-                details: [
-                  "Maybank: Automate loan application process, validate SLIK, integrate AA & DOREME services.",
-                  "Oldmutual: Developed employee ideas platform for collaboration and innovation.",
-                ],
-              },
-              {
-                title: "Frontend Developer – Ekosis",
-                period: "January 2021 - December 2022",
-                desc: "Platform digital untuk pelaku agribisnis",
-                details: [
-                  "Develop frontend for agribusiness platform using modern React technologies.",
-                  "Seamless API Integration with backend team.",
-                ],
-              },
-            ].map((exp, idx) => (
+  {
+    title: "Fullstack Developer (Part-Time) – OMNI IT Consulting",
+    period: "March 2025 – Present",
+    desc: "Built and upgraded ERP systems for various retail companies.",
+    details: [
+      "MJ Beauty: Developed an ERP system for beauty products, cosmetics, skincare, personal care, and makeup industries.",
+    ],
+  },
+  {
+    title: "Backend Developer – Digital Center",
+    period: "December 2022 – Present",
+    desc: "Developed enterprise-level backend systems and internal tools.",
+    details: [
+      "Maybank: Automated the loan application process, implemented SLIK validation, and integrated AA and DOREME services.",
+      "Oldmutual: Built an employee innovation platform to facilitate collaboration and idea management.",
+    ],
+  },
+  {
+    title: "Frontend Developer – Ekosis",
+    period: "January 2021 – December 2022",
+    desc: "Built a digital platform for agribusinesses.",
+    details: [
+      "Developed the frontend of an agribusiness platform using modern React technologies.",
+      "Collaborated with the backend team for seamless API integration.",
+    ],
+  },
+]
+.map((exp, idx) => (
               <div key={idx} className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold">{exp.title}</h3>
                 <p className="text-gray-400 text-sm">{exp.period}</p>
@@ -262,7 +263,7 @@ export default function Home() {
 
         {/* Certifications Section */}
         <section id="certifications" className="max-w-4xl mx-auto py-10 px-4">
-          <h2 className="text-2xl font-bold mb-4">Certification</h2>
+          <h2 className="text-2xl font-bold mb-4">Certifications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Card 1 */}
             <div
