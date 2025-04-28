@@ -1,0 +1,231 @@
+"use client";
+import { useState } from 'react';
+
+export default function Home() {
+
+  const [showDetails, setShowDetails] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleShowDetails = (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+    setShowDetails(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowDetails(false);
+    setSelectedImage(null);
+  };
+  return (
+    <div className="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
+      {/* Header Section */}
+      <header className="flex flex-col items-center bg-gray-800 pb-6">
+        <img src="/background.jpg" alt="banner" className="w-full h-48 object-cover" />
+        <img
+          src="/images/me.jpeg"
+          alt="profile"
+          className="w-24 h-24 rounded-full -mt-12 border-4 border-gray-900"
+        />
+        <h1 className="mt-4 text-2xl font-bold">Lordgent Rafelino</h1>
+        <p className="text-sm text-gray-400">Backend Engineer</p>
+        <a 
+          href="https://wa.me/628817083978" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="mt-4 bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600 mb-4"
+        >
+          Contact
+        </a>
+      </header>
+
+      {/* Nav Tabs */}
+      <nav className="flex flex-wrap justify-center gap-6 text-gray-400 border-t border-b border-gray-700 py-3 bg-gray-800 sticky top-0 z-10">
+        {["Feed", "Experience", "Education", "Skills", "Projects", ""].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="hover:text-white transition"
+          >
+            {item}
+          </a>
+        ))}
+      </nav>
+
+      {/* Main Content */}
+      <main className="flex-grow">
+        {/* Feed */}
+        <section className="max-w-4xl mx-auto px-4 py-10">
+        <p className="text-gray-300 text-base leading-relaxed">
+          I am a passionate and results-driven <strong>Fullstack Developer</strong> with <strong>4 years of professional experience</strong> building web-based solutions across industries such as banking, agribusiness, retail, and consulting.
+          Skilled in <strong>backend development</strong> (Java Spring Boot, Laravel, Node.js) and <strong>frontend development</strong> (React, Next.js, Tailwind CSS), I specialize in creating scalable, secure, and high-performance applications.
+          I thrive on continuous learning and delivering maintainable, quality-driven software solutions.
+        </p>
+      </section>
+
+        {/* Experience */}
+        <section id="experience" className="max-w-4xl mx-auto px-4 py-10">
+          <h2 className="text-2xl font-bold mb-6">Experience</h2>
+          <div className="space-y-6">
+            {[
+              {
+                title: "Fullstack Developer (Part Time) – OMNI IT Consulting",
+                period: "April 2025 - Present",
+                desc: "Build and upgraded ERP systems for several retail companies",
+                details: [
+                  "MJ Beauty: Build ERP system for beauty products, cosmetics, skincare, personal care, makeup.",
+                ],
+              },
+              {
+                title: "Backend Developer – Digital Center",
+                period: "December 2022 - Present",
+                desc: "Enterprise-level backend systems and internal tools development.",
+                details: [
+                  "Maybank: Automate loan application process, validate SLIK, integrate AA & DOREME services.",
+                  "Oldmutual: Developed employee ideas platform for collaboration and innovation.",
+                ],
+              },
+              {
+                title: "Frontend Developer – Ekosis",
+                period: "January 2021 - December 2022",
+                desc: "Platform digital untuk pelaku agribisnis",
+                details: [
+                  "Develop frontend for agribusiness platform using modern React technologies.",
+                  "Seamless API Integration with backend team.",
+                ],
+              },
+            ].map((exp, idx) => (
+              <div key={idx} className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold">{exp.title}</h3>
+                <p className="text-gray-400 text-sm">{exp.period}</p>
+                <p className="text-gray-400 mt-2">{exp.desc}</p>
+                <ul className="list-disc list-inside text-gray-300 space-y-1 mt-2 text-sm">
+                  {exp.details.map((d, i) => (
+                    <li key={i}>{d}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Education */}
+        <section id="education" className="max-w-4xl mx-auto px-4 py-10">
+          <h2 className="text-2xl font-bold mb-6">Education</h2>
+          <div className="space-y-6">
+            {[
+              {
+                title: "Information Systems",
+                institution: "Universitas Terbuka",
+                period: "2023 - Present",
+              },
+              {
+                title: "Fullstack Developer Bootcamp",
+                institution: "Dumbways.id",
+                period: "2021",
+              },
+            ].map((edu, idx) => (
+              <div key={idx} className="bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold">{edu.title}</h3>
+                <p className="text-gray-400 text-sm">{edu.institution} — {edu.period}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section id="skills" className="max-w-4xl mx-auto px-4 py-10">
+          <h2 className="text-2xl font-bold mb-6">Skills</h2>
+          <div className="flex flex-wrap gap-3">
+            {["JavaScript", "TypeScript", "Laravel", "AWS", "Springboot", "Docker", "SQL", "Tailwind CSS"].map((skill) => (
+              <span key={skill} className="bg-gray-700 px-4 py-2 rounded-full text-sm">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section id="projects" className="max-w-4xl mx-auto px-4 py-10">
+          <h2 className="text-2xl font-bold mb-6">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                img: "/images/project-maybank.jpg",
+                title: "Maybank – Credit Workflow Automation",
+                desc: "Automated credit application process, SLIK validation, and module integration.",
+              },
+              {
+                img: "/images/innovoice.jpeg",
+                title: "Oldmutual – Internal Idea Sharing Platform",
+                desc: "Internal platform for idea sharing among Oldmutual employees.",
+              },
+              {
+                img: "/images/ekosis-mart.png",
+                title: "Ekosis – Platform Agribusiness",
+                desc: "Development of an agribusiness marketplace and social media platform.",
+              },
+              {
+                img: "/images/mjbeauty.png",
+                title: "Mj Beauty – ERP System",
+                desc: "Development and enhancement of ERP system for cosmetics retailer.",
+              },
+            ].map((proj, idx) => (
+              <div key={idx} className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
+                <img src={proj.img} alt={proj.title} className="rounded mb-4 object-cover h-40 w-full" />
+                <h3 className="text-lg font-semibold">{proj.title}</h3>
+                <p className="text-gray-400 text-sm mt-2">{proj.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+   {/* Certifications Section */}
+   <section id="certifications" className="max-w-4xl mx-auto py-10 px-4">
+        <h2 className="text-2xl font-bold mb-4">Certification</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Card 1 */}
+          <div className="flex flex-col items-center" onClick={() => handleShowDetails("/certifications/java_basic.jpg")}>
+            <img src="/certifications/java_basic.jpg" className="w-full h-40 object-cover rounded shadow cursor-pointer" alt="Java Basic Certification" />
+            <p className="mt-2 text-center text-sm text-gray-300">Java Basic Certification</p>
+          </div>
+          {/* Card 2 */}
+          <div className="flex flex-col items-center" onClick={() => handleShowDetails("/certifications/certificate-dumbways.jpg")}>
+            <img src="/certifications/certificate-dumbways.jpg" className="w-full h-40 object-cover rounded shadow cursor-pointer" alt="Dumbways Fullstack Bootcamp Certificate" />
+            <p className="mt-2 text-center text-sm text-gray-300">Dumbways Fullstack Bootcamp Certificate</p>
+          </div>
+          {/* Card 3 */}
+          <div className="flex flex-col items-center" onClick={() => handleShowDetails("/certifications/bnsp.jpg")}>
+            <img src="/certifications/bnsp.jpg" className="w-full h-40 object-cover rounded shadow cursor-pointer" alt="BNSP Certification" />
+            <p className="mt-2 text-center text-sm text-gray-300">BNSP Certification</p>
+          </div>
+          {/* Card 4 */}
+          <div className="flex flex-col items-center" onClick={() => handleShowDetails("/certifications/blk.jpg")}>
+            <img src="/certifications/blk.jpg" className="w-full h-40 object-cover rounded shadow cursor-pointer" alt="BLK Certification" />
+            <p className="mt-2 text-center text-sm text-gray-300">BLK Certification</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Modal for showing image in full size */}
+      {showDetails && selectedImage && (
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative bg-gray-900 p-4 rounded-lg max-w-3xl mx-auto">
+            <img src={selectedImage} className="w-full h-auto rounded" alt="Selected Certification" />
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full hover:bg-red-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      </main>
+
+      {/* Footer */}
+      <footer className="py-6 text-center text-gray-500 border-t border-gray-700 mt-10">
+        <p>© 2025 Lordgent Rafelino</p>
+      </footer>
+    </div>
+  );
+}
