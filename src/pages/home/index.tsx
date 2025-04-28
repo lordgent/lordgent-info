@@ -99,6 +99,7 @@ export default function Home() {
         ))}
       </nav>
 
+
       {/* Main Content */}
       <main className="flex-grow">
         {/* Feed */}
