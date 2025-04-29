@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" className="scroll-smooth">
       <Head>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TJ5D9LF88"></script>
           <script

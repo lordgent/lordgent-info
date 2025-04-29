@@ -80,8 +80,8 @@ export default function Home() {
       </header>
 
       {/* Nav Tabs */}
-      <nav className="flex flex-nowrap justify-center gap-6 text-gray-400 border-t border-b border-gray-700 py-3 bg-gray-800 sticky top-0 z-10 overflow-x-auto scrollbar-hide">
-        {[
+      <nav className="flex flex-nowrap justify-start md:justify-center mb-4 gap-6 text-gray-400 border-t border-b border-gray-700 py-3 bg-gray-800 sticky top-0 z-10 overflow-x-auto scrollbar-hide pl-4 pr-4">
+      {[
           "Summary",
           "Experience",
           "Education",
@@ -104,19 +104,16 @@ export default function Home() {
       <main className="flex-grow">
         {/* Feed */}
         <section id="summary" className="max-w-4xl mx-auto px-4 py-10">
-          <p className="text-gray-300 text-base leading-relaxed">
-            I am a passionate and results-driven{" "}
-            <strong>Fullstack Developer</strong> with{" "}
-            <strong>4 years of professional experience</strong> in building
-            web-based solutions across industries such as banking, agribusiness,
-            retail, and consulting. Proficient in{" "}
-            <strong>Backend</strong> (Java Spring Boot, Laravel,
-            Node.js) and <strong>Frontend</strong> (React, Next.js,
-            Tailwind CSS), I specialize in creating scalable, secure, and
-            high-performance applications. I am committed to continuous learning
-            and delivering maintainable, high-quality software solutions.
-          </p>
-        </section>
+  <p className="text-gray-300 text-base leading-relaxed">
+    I am a passionate and results-driven <strong>Fullstack Developer</strong> with <
+      strong>4 years of professional experience</strong> in building web-based 
+      solutions across industries including banking, agribusiness, retail, and consulting. 
+      Proficient in both <strong>Backend</strong> (Java Spring Boot, Laravel, Node.js) and 
+      <strong> Frontend</strong> (React, Next.js, Tailwind CSS) technologies, I specialize 
+      in developing scalable, secure, and high-performance applications. I’m committed to continuous 
+      learning and delivering clean, maintainable, and high-quality software solutions.
+  </p>
+</section>
 
         {/* Experience */}
         <section id="experience" className="max-w-4xl mx-auto px-4 py-10">
