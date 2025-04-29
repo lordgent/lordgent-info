@@ -121,7 +121,7 @@ export default function Home() {
           <div className="space-y-6">
             {[
   {
-    title: "Fullstack Developer (Part-Time) – OMNI IT Consulting",
+    title: "Fullstack Developer (Freelance) – OMNI IT Consulting",
     period: "March 2025 – Present",
     desc: "Built and upgraded ERP systems for various retail companies.",
     details: [
