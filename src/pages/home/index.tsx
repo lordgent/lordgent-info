@@ -142,31 +142,32 @@ export default function Home() {
           <div className="space-y-6">
             {[
   {
-    title: "Fullstack Developer (Freelance) – OMNI IT Consulting",
-    period: "March 2025 – Present",
-    desc: "Built and upgraded ERP systems for various retail companies.",
-    details: [
-      "MJ Beauty: Developed an ERP system for beauty products, cosmetics, skincare, personal care, and makeup industries.",
-    ],
+    "title": "Fullstack Developer (Freelance) – OMNI IT Consulting",
+    "period": "March 2025 – Present",
+    "desc": "Built and upgraded ERP systems for retail clients, focusing on efficiency and scalability.",
+    "details": [
+      "Developed an ERP system for MJ Beauty, addressing the needs of the beauty, cosmetics, skincare, and personal care industries."
+    ]
   },
   {
-    title: "Backend Developer – Digital Center",
-    period: "December 2022 – Present",
-    desc: "Developed enterprise-level backend systems and internal tools.",
-    details: [
-      "Maybank: Automated the loan application process, implemented SLIK validation, and integrated AA and DOREME services.",
-      "Oldmutual: Built an employee innovation platform to facilitate collaboration and idea management.",
-    ],
+    "title": "Backend Developer – Digital Center",
+    "period": "December 2022 – Present",
+    "desc": "Developed scalable backend systems and APIs for enterprise clients, delivering high-performance and secure software solutions..",
+    "details": [
+      "Automated loan applications for Maybank, incorporating services like SLIK validation, AA, and DOREME.",
+      "Created an employee innovation platform for Oldmutual, facilitating collaboration and idea management."
+    ]
   },
   {
-    title: "Frontend Developer – Ekosis",
-    period: "January 2021 – December 2022",
-    desc: "Built a digital platform for agribusinesses.",
-    details: [
-      "Developed the frontend of an agribusiness platform using modern React technologies.",
-      "Collaborated with the backend team for seamless API integration.",
-    ],
-  },
+    "title": "Frontend Developer – Ekosis",
+    "period": "January 2021 – December 2022",
+    "desc": "Contributed to the development of a digital platform for agribusinesses, improving user experience and functionality.",
+    "details": [
+      "Implemented frontend features using React.js, with a strong emphasis on user experience and responsiveness.",
+      "Collaborated with the backend team to integrate APIs, ensuring smooth data flow.",
+      "Enhanced platform performance, ensuring compatibility across mobile and browsers."
+    ]
+  }
 ]
 .map((exp, idx) => (
               <div key={idx} className="bg-gray-800 p-6 rounded-lg">
