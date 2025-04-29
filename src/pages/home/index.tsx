@@ -1,10 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function Home() {
   const [showDetails, setShowDetails] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); 
+  
+    return () => clearTimeout(timer);
+  }, []);
+  
   const handleShowDetails = (imageUrl: string) => {
     setSelectedImage(imageUrl);
     setShowDetails(true);
@@ -14,6 +23,18 @@ export default function Home() {
     setShowDetails(false);
     setSelectedImage(null);
   };
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-900">
+        <div className="flex space-x-2">
+          <div className="w-4 h-4 bg-pink-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+          <div className="w-4 h-4 bg-pink-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+          <div className="w-4 h-4 bg-pink-500 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    );
+  }
+  
   return (
     <div className="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
       {/* Header Section */}
