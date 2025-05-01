@@ -285,6 +285,20 @@ export default function Home() {
         <section id="certifications" className="max-w-4xl mx-auto py-10 px-4">
           <h2 className="text-2xl font-bold mb-4">Certifications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+              className="flex flex-col items-center"
+              onClick={() =>
+                handleShowDetails("/certifications/software_engineer.jpg")
+              }
+            >
+              <img
+                src="/certifications/software_engineer.jpg"
+                className="w-full h-40 object-cover rounded shadow cursor-pointer"
+                alt="Java Basic Certification"
+              />
+              <p className="mt-2 text-center text-sm text-gray-300">
+              Software Engineer Certificate</p>
+            </div>
             {/* Card 1 */}
             <div
               className="flex flex-col items-center"
