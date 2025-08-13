@@ -143,7 +143,7 @@ export default function Home() {
             {[
   {
     "title": "Fullstack Developer (Freelance) – OMNI IT Consulting",
-    "period": "March 2025 – Present",
+    "period": "March 2025 – August 2025",
     "desc": "Built and upgraded ERP systems for retail clients, focusing on efficiency and scalability.",
     "details": [
       "Developed an ERP system for MJ Beauty, addressing the needs of the beauty, cosmetics, skincare, and personal care industries."
